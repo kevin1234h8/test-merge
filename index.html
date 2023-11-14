@@ -19,11 +19,11 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="s mx-auto w-auto">
+    <div class="w-auto mx-auto s">
       <div>
-        <div class="flex items-center justify-between bg-red-50 px-8 py-4">
+        <div class="flex items-center justify-between px-8 py-4 bg-red-50">
           <div>Home</div>
-          <div class="text-2xl hidden">Hello world</div>
+          <div class="hidden text-2xl">Hello world</div>
           <input />
           <div class="flex items-center justify-center gap-4">
             <div>Search</div>
@@ -32,18 +32,19 @@
         </div>
       </div>
       <div>Enterprise</div>
+      <div>Email</div>
     </div>
 
-    <!-- <div class="w-auto mx-auto max-w-5xl">
+    <!-- <div class="w-auto max-w-5xl mx-auto">
       <nav
         class="navbar-container navbar navbar-expand-lg navbar-light justify-content-between"
         style="display: flex; justify-content: space-between"
       >
         <div>Home</div>
-        <div class="navbar-brand mx-auto d-block text-center to-black">
+        <div class="mx-auto text-center navbar-brand d-block to-black">
           <h3>Email &amp; Record Management System Portal</h3>
         </div>
-        <form class="align-items-center my-2 my-lg-0">
+        <form class="my-2 align-items-center my-lg-0">
           <div id="advancesearch" style="z-index: 99">
             <img
               src="/otcsemails-v2/static/media/caret_down_white.c3b96117.svg"
@@ -76,7 +77,7 @@
         <div class="searchposition">
           <div
             id="myinput"
-            class="card container mt-2"
+            class="container mt-2 card"
             style="
               z-index: 3;
               width: 30%;
@@ -88,8 +89,8 @@
             "
             hidden=""
           >
-            <form id="myinput" class="form mt-3 fullwidth" style="height: 72vh">
-              <div class="form-group row mt-1">
+            <form id="myinput" class="mt-3 form fullwidth" style="height: 72vh">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >Contains Attachment</label
                 >
@@ -101,7 +102,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >Attachment/ File Name</label
                 >
@@ -114,7 +115,7 @@
                   />
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >From</label
                 >
@@ -127,7 +128,7 @@
                   />
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >Sent From</label
                 >
@@ -161,7 +162,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >Subject</label
                 >
@@ -174,7 +175,7 @@
                   />
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >To</label
                 >
@@ -187,7 +188,7 @@
                   />
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <label id="formlabel" class="col-sm-3 col-form-label text-dark"
                   >Location</label
                 >
@@ -198,7 +199,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <div class="col-sm-3 col-form-label"></div>
                 <div class="col-sm-9">
                   <select id="searchArchive" class="form-control">
@@ -207,7 +208,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <div class="col-sm-3 col-form-label"></div>
                 <div class="col-sm-9 no-gutters">
                   <div class="MuiGrid-root MuiGrid-container">
@@ -247,7 +248,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <div class="col-sm-3 col-form-label text-dark"></div>
                 <div class="col-sm-9 no-gutters">
                   <div class="MuiGrid-root MuiGrid-container">
@@ -287,7 +288,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <div class="col-sm-3 col-form-label text-dark"></div>
                 <div class="col-sm-9 no-gutters">
                   <div class="MuiGrid-root MuiGrid-container">
@@ -327,7 +328,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group row mt-1">
+              <div class="mt-1 form-group row">
                 <div class="col-sm-3 col-form-label text-dark"></div>
                 <div class="col-sm-9 no-gutters">
                   <div class="MuiGrid-root MuiGrid-container">
@@ -369,7 +370,7 @@
               </div>
               <div class="mb-3">
                 <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1plp533"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1plp533"
                   tabindex="0"
                   type="submit"
                 >
@@ -377,7 +378,7 @@
                     class="MuiTouchRipple-root css-w0pj6f"
                   ></span></button
                 ><button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-18cnvjz"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-18cnvjz"
                   tabindex="0"
                   type="button"
                 >
@@ -389,7 +390,7 @@
               <div class="search-input-container"><div></div></div>
             </form>
           </div>
-          <div class="d-flex gap-2 align-items-center justify-content-end">
+          <div class="gap-2 d-flex align-items-center justify-content-end">
             <div
               class="brightness nav justify-content-end"
               id="search"
