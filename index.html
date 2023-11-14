@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="s mx-auto w-auto">
+      <div>
+        <div class="flex items-center justify-between bg-red-50 px-8 py-4">
+          <div>Home</div>
+          <div class="text-2xl hidden">Hello world</div>
+          <input />
+          <div class="flex items-center justify-center gap-4">
+            <div>Search</div>
+            <div>Logout</div>
+          </div>
+        </div>
+      </div>
+      <div>Enterprise</div>
+    </div>
+
+    <!-- <div class="w-auto mx-auto max-w-5xl">
+      <nav
+        class="navbar-container navbar navbar-expand-lg navbar-light justify-content-between"
+        style="display: flex; justify-content: space-between"
+      >
+        <div>Home</div>
+        <div class="navbar-brand mx-auto d-block text-center to-black">
+          <h3>Email &amp; Record Management System Portal</h3>
+        </div>
+        <form class="align-items-center my-2 my-lg-0">
+          <div id="advancesearch" style="z-index: 99">
+            <img
+              src="/otcsemails-v2/static/media/caret_down_white.c3b96117.svg"
+              title="Advance Search"
+              id="advancesearch"
+              height="40px"
+              alt=""
+            />
+          </div>
+          <input
+            id="myinput"
+            type="text"
+            class="Search_Bar"
+            placeholder="Search"
+            title="Enter your search term"
+            aria-label="Enter your search term"
+            value=""
+          />
+          <div id="clear" hidden="" style="margin-left: -25px; z-index: 999">
+            <img
+              src="/otcsemails-v2/static/media/formfield_clear24.0cc247c2.svg"
+              title="Clear Search Input"
+              class="responsive"
+              height="20px"
+              alt=""
+              id="clear"
+            />
+          </div>
+        </form>
+        <div class="searchposition">
+          <div
+            id="myinput"
+            class="card container mt-2"
+            style="
+              z-index: 3;
+              width: 30%;
+              position: absolute;
+              margin-left: 1%;
+              overflow: auto;
+              left: 330px;
+              top: 93%;
+            "
+            hidden=""
+          >
+            <form id="myinput" class="form mt-3 fullwidth" style="height: 72vh">
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >Contains Attachment</label
+                >
+                <div class="col-sm-9">
+                  <select id="myadvancesearchattach" class="form-control">
+                    <option value="UNDEFINED">Specify</option>
+                    <option value="YES">Yes</option>
+                    <option value="NO">No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >Attachment/ File Name</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="myinput"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >From</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="myinput"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >Sent From</label
+                >
+                <div class="col-sm-4">
+                  <div class="react-datepicker-wrapper">
+                    <div class="react-datepicker__input-container">
+                      <input
+                        type="text"
+                        id="fromdate"
+                        class="form-control"
+                        value="11/10/2023"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-1">
+                  <label id="formlabel" class="col-form-label text-dark"
+                    >To</label
+                  >
+                </div>
+                <div class="col-sm-4">
+                  <div class="react-datepicker-wrapper">
+                    <div class="react-datepicker__input-container">
+                      <input
+                        type="text"
+                        id="todate"
+                        class="form-control"
+                        value="11/11/2023"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >Subject</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="myinput"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >To</label
+                >
+                <div class="col-sm-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="myinput"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <label id="formlabel" class="col-sm-3 col-form-label text-dark"
+                  >Location</label
+                >
+                <div class="col-sm-9">
+                  <select id="searchEmails" class="form-control">
+                    <option value="-">-</option>
+                    <option value="-">-</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <div class="col-sm-3 col-form-label"></div>
+                <div class="col-sm-9">
+                  <select id="searchArchive" class="form-control">
+                    <option value="-">-</option>
+                    <option value="-">-</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <div class="col-sm-3 col-form-label"></div>
+                <div class="col-sm-9 no-gutters">
+                  <div class="MuiGrid-root MuiGrid-container">
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-grid-xs-12"
+                    >
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11">
+                        <input
+                          type="search"
+                          class="form-control"
+                          id="search1"
+                          placeholder="Indicate the Folder to Search in"
+                          value=""
+                        />
+                      </div>
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1">
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                          tabindex="0"
+                          type="button"
+                          style="border: 1px solid rgb(206, 212, 218)"
+                        >
+                          <span class="MuiIconButton-label"
+                            ><svg
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M11.5 9C10.12 9 9 10.12 9 11.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S12.88 9 11.5 9zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3.21 14.21l-2.91-2.91c-.69.44-1.51.7-2.39.7C9.01 16 7 13.99 7 11.5S9.01 7 11.5 7 16 9.01 16 11.5c0 .88-.26 1.69-.7 2.39l2.91 2.9-1.42 1.42z"
+                              ></path></svg></span
+                          ><span class="MuiTouchRipple-root"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <div class="col-sm-3 col-form-label text-dark"></div>
+                <div class="col-sm-9 no-gutters">
+                  <div class="MuiGrid-root MuiGrid-container">
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-grid-xs-12"
+                    >
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11">
+                        <input
+                          type="search"
+                          class="form-control"
+                          id="search2"
+                          placeholder="Indicate the Folder to Search in"
+                          value=""
+                        />
+                      </div>
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1">
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                          tabindex="0"
+                          type="button"
+                          style="border: 1px solid rgb(206, 212, 218)"
+                        >
+                          <span class="MuiIconButton-label"
+                            ><svg
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M11.5 9C10.12 9 9 10.12 9 11.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S12.88 9 11.5 9zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3.21 14.21l-2.91-2.91c-.69.44-1.51.7-2.39.7C9.01 16 7 13.99 7 11.5S9.01 7 11.5 7 16 9.01 16 11.5c0 .88-.26 1.69-.7 2.39l2.91 2.9-1.42 1.42z"
+                              ></path></svg></span
+                          ><span class="MuiTouchRipple-root"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <div class="col-sm-3 col-form-label text-dark"></div>
+                <div class="col-sm-9 no-gutters">
+                  <div class="MuiGrid-root MuiGrid-container">
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-grid-xs-12"
+                    >
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11">
+                        <input
+                          type="search"
+                          class="form-control"
+                          id="search3"
+                          placeholder="Indicate the Folder to Search in"
+                          value=""
+                        />
+                      </div>
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1">
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                          tabindex="0"
+                          type="button"
+                          style="border: 1px solid rgb(206, 212, 218)"
+                        >
+                          <span class="MuiIconButton-label"
+                            ><svg
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M11.5 9C10.12 9 9 10.12 9 11.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S12.88 9 11.5 9zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3.21 14.21l-2.91-2.91c-.69.44-1.51.7-2.39.7C9.01 16 7 13.99 7 11.5S9.01 7 11.5 7 16 9.01 16 11.5c0 .88-.26 1.69-.7 2.39l2.91 2.9-1.42 1.42z"
+                              ></path></svg></span
+                          ><span class="MuiTouchRipple-root"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row mt-1">
+                <div class="col-sm-3 col-form-label text-dark"></div>
+                <div class="col-sm-9 no-gutters">
+                  <div class="MuiGrid-root MuiGrid-container">
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item MuiGrid-grid-xs-12"
+                    >
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-11">
+                        <input
+                          type="search"
+                          class="form-control"
+                          id="search4"
+                          placeholder="Indicate the Folder to Search in"
+                          value=""
+                        />
+                      </div>
+                      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-1">
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary"
+                          tabindex="0"
+                          type="button"
+                          style="border: 1px solid rgb(206, 212, 218)"
+                        >
+                          <span class="MuiIconButton-label"
+                            ><svg
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M11.5 9C10.12 9 9 10.12 9 11.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5S12.88 9 11.5 9zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-3.21 14.21l-2.91-2.91c-.69.44-1.51.7-2.39.7C9.01 16 7 13.99 7 11.5S9.01 7 11.5 7 16 9.01 16 11.5c0 .88-.26 1.69-.7 2.39l2.91 2.9-1.42 1.42z"
+                              ></path></svg></span
+                          ><span class="MuiTouchRipple-root"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1plp533"
+                  tabindex="0"
+                  type="submit"
+                >
+                  Search<span
+                    class="MuiTouchRipple-root css-w0pj6f"
+                  ></span></button
+                ><button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-18cnvjz"
+                  tabindex="0"
+                  type="button"
+                >
+                  Clear Filter<span
+                    class="MuiTouchRipple-root css-w0pj6f"
+                  ></span>
+                </button>
+              </div>
+              <div class="search-input-container"><div></div></div>
+            </form>
+          </div>
+          <div class="d-flex gap-2 align-items-center justify-content-end">
+            <div
+              class="brightness nav justify-content-end"
+              id="search"
+              style="cursor: pointer"
+            >
+              <img
+                src="/otcsemails-v2/static/media/search_header_white.b38a82f2.svg"
+                title="Search"
+                class="responsive"
+                height="45px"
+                width="45px"
+                alt=""
+                id="search"
+              />
+            </div>
+            <div
+              class="justify-content-end"
+              id="logout"
+              style="cursor: pointer; margin-left: 10px"
+            >
+              <img
+                src="/otcsemails-v2/static/media/logout.5886060d.svg"
+                title="Logout"
+                width="30px"
+                alt="logout"
+                id="logout"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+      <span class="information_bar row"
+        ><span class="breadcrumbstyle">Enterprise</span
+        ><span class="ml-2"
+          ><img
+            src="/otcsemails-v2/static/media/breadcrumb_arrow.7004ea42.svg"
+            alt=""
+          /><span class="ml-2" style="color: rgb(195, 229, 246)">
+            Email</span
+          ></span
+        ></span
+      >
+    </div> -->
+  </body>
+</html>
