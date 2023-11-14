@@ -2,3 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.s {
+  max-width: 10000px;
+}
